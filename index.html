@@ -10,11 +10,28 @@
             margin: 0;
             padding: 0;
             text-align: center;
+            color: white;
+        }
+        .background {
             background: url('https://media.discordapp.net/attachments/1342920553895428168/1346969014186020924/negr.jpg?ex=67ca1e26&is=67c8cca6&hm=6394f6daac2d0893da631f7a37ba684903d30cf8c33f947304a09912abe7b4df&=&format=webp&width=1192&height=671') no-repeat center center/cover;
+            height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
-            color: white;
+            justify-content: center;
+        }
+        .cyan-background {
+            background: linear-gradient(45deg, cyan, #00d9ff);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            animation: gradientAnimation 5s infinite alternate;
+        }
+        @keyframes gradientAnimation {
+            0% { background: linear-gradient(45deg, cyan, #00d9ff); }
+            100% { background: linear-gradient(45deg, #00d9ff, cyan); }
         }
         header {
             background: rgba(51, 51, 51, 0.8);
@@ -49,13 +66,6 @@
         .discord-button:hover {
             background-color: #5b6eae;
         }
-        .container {
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
         .info-button {
             background-color: #ff9800;
             color: white;
@@ -70,7 +80,7 @@
         .info-button:hover {
             background-color: #e68900;
         }
-        .section {
+        .about-section {
             height: 100vh;
             display: flex;
             flex-direction: column;
@@ -81,14 +91,13 @@
             background: rgba(51, 51, 51, 0.8);
             color: white;
             padding: 10px;
-            position: fixed;
-            bottom: 0;
+            text-align: center;
             width: 100%;
         }
     </style>
     <script>
-        function scrollToSection() {
-            document.getElementById('about-me').scrollIntoView({ behavior: 'smooth' });
+        function scrollToAbout() {
+            document.getElementById('about-section').scrollIntoView({ behavior: 'smooth' });
         }
     </script>
 </head>
@@ -98,12 +107,12 @@
         Frexiiks Life
         <a href="https://discord.com/users/1110995698796736622" class="discord-button" target="_blank">My Discord</a>
     </header>
-    <div class="container">
+    <div class="background">
         <h1>Welcome to Frexiiks Life</h1>
         <p>Minecraft Skripter | OGFN Developer | Coder</p>
-        <button class="info-button" onclick="scrollToSection()">Get to know me more</button>
+        <button class="info-button" onclick="scrollToAbout()">Get to know me more</button>
     </div>
-    <div id="about-me" class="section">
+    <div id="about-section" class="cyan-background">
         <h2>About Me</h2>
         <p>I've been scripting Minecraft plugins and developing for various gaming communities for years. Passionate about coding and game development.</p>
     </div>
