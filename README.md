@@ -1,5 +1,5 @@
 <h2 align="center">
-                          Minecraft-Website <strong>;</strong> 😼
+                          Frexiiks Life <strong>;</strong> 😼
 <br>
 
 
