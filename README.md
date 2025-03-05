@@ -1,11 +1,11 @@
 <h2 align="center">
-                          Frexiiks Life <strong>;</strong> 😼
+                          Frexiiks Life <strong></strong>
 <br>
 
 
 # Links
-- 🔗 [Youtube Channel](https://www.youtube.com/channel/UC9_kma0SOd-oSe24gqpqqCA)
-- 🔗 [Support Discord](https://discord.com/users/394251966571872256)
+- 🔗 [My TikTok](https://www.tiktok.com/@144hzfrexiikk)
+- 🔗 [My Discord](https://discord.com/users/1110995698796736622)
 
 
 
