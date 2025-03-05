@@ -11,6 +11,7 @@
             padding: 0;
             text-align: center;
             color: white;
+            background-color: #0d0d0d;
         }
         .background {
             background: url('https://media.discordapp.net/attachments/1342920553895428168/1346969014186020924/negr.jpg?ex=67ca1e26&is=67c8cca6&hm=6394f6daac2d0893da631f7a37ba684903d30cf8c33f947304a09912abe7b4df&=&format=webp&width=1192&height=671') no-repeat center center/cover;
@@ -81,11 +82,23 @@
             background-color: #e68900;
         }
         .about-section {
-            height: 100vh;
+            background: rgba(20, 20, 20, 0.9);
+            padding: 50px;
+            border-radius: 10px;
+            max-width: 800px;
+            text-align: center;
+        }
+        .about-section h2 {
             display: flex;
-            flex-direction: column;
-            justify-content: center;
             align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        .about-section h2::before {
+            content: '\1F9D1';
+        }
+        .about-section h2::after {
+            content: '\2728';
         }
         footer {
             background: rgba(51, 51, 51, 0.8);
@@ -112,7 +125,7 @@
         <p>Minecraft Skripter | OGFN Developer | Coder</p>
         <button class="info-button" onclick="scrollToAbout()">Get to know me more</button>
     </div>
-    <div id="about-section" class="cyan-background">
+    <div id="about-section" class="about-section">
         <h2>About Me</h2>
         <p>I've been scripting Minecraft plugins and developing for various gaming communities for years. Passionate about coding and game development.</p>
     </div>
