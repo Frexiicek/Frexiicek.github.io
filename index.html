@@ -13,9 +13,7 @@
             background: url('https://media.discordapp.net/attachments/1342920553895428168/1346969014186020924/negr.jpg?ex=67ca1e26&is=67c8cca6&hm=6394f6daac2d0893da631f7a37ba684903d30cf8c33f947304a09912abe7b4df&=&format=webp&width=1192&height=671') no-repeat center center/cover;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
-            height: 100vh;
             color: white;
         }
         header {
@@ -58,6 +56,28 @@
             justify-content: center;
             align-items: center;
         }
+        .info-button {
+            background-color: #ff9800;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+        .info-button:hover {
+            background-color: #e68900;
+        }
+        .hidden-section {
+            display: none;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            max-width: 600px;
+        }
         footer {
             background: rgba(51, 51, 51, 0.8);
             color: white;
@@ -67,6 +87,11 @@
             width: 100%;
         }
     </style>
+    <script>
+        function showMore() {
+            document.getElementById('more-info').style.display = 'block';
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -77,6 +102,11 @@
     <div class="container">
         <h1>Welcome to Frexiiks Life</h1>
         <p>Minecraft Skripter | OGFN Developer | Coder</p>
+        <button class="info-button" onclick="showMore()">Get to know me more</button>
+        <div id="more-info" class="hidden-section">
+            <h2>About Me</h2>
+            <p>I've been scripting Minecraft plugins and developing for various gaming communities for years. Passionate about coding and game development.</p>
+        </div>
     </div>
     <footer>&copy; 2025 Frexiiks Life. All rights reserved.</footer>
 </body>
