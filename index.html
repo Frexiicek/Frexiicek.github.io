@@ -21,19 +21,6 @@
             align-items: center;
             justify-content: center;
         }
-        .cyan-background {
-            background: linear-gradient(45deg, cyan, #00d9ff);
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            animation: gradientAnimation 5s infinite alternate;
-        }
-        @keyframes gradientAnimation {
-            0% { background: linear-gradient(45deg, cyan, #00d9ff); }
-            100% { background: linear-gradient(45deg, #00d9ff, cyan); }
-        }
         header {
             background: rgba(51, 51, 51, 0.8);
             color: white;
@@ -82,24 +69,30 @@
             background-color: #e68900;
         }
         .about-section {
-            background: url('https://source.unsplash.com/1600x900/?galaxy,stars') no-repeat center center/cover;
+            position: relative;
+            overflow: hidden;
             padding: 80px;
             border-radius: 10px;
             max-width: 900px;
             text-align: center;
             margin: 50px auto;
+            color: white;
         }
-        .about-section h2 {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
+        .video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
         }
-        .about-section h2::before {
-            content: '\1F9D1';
-        }
-        .about-section h2::after {
-            content: '\2728';
+        .about-content {
+            position: relative;
+            z-index: 1;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
         }
         footer {
             background: rgba(51, 51, 51, 0.8);
@@ -127,8 +120,13 @@
         <button class="info-button" onclick="scrollToAbout()">Get to know me more</button>
     </div>
     <div id="about-section" class="about-section">
-        <h2>About Me</h2>
-        <p>I've been scripting Minecraft plugins and developing for various gaming communities for years. Passionate about coding and game development.</p>
+        <video autoplay loop muted playsinline class="video-background">
+            <source src="https://media.tenor.com/WkuQC7dwNa8AAAPo/space-wallpaper-stars-background.mp4" type="video/mp4">
+        </video>
+        <div class="about-content">
+            <h2>About Me</h2>
+            <p>I've been scripting Minecraft plugins and developing for various gaming communities for years. Passionate about coding and game development.</p>
+        </div>
     </div>
     <footer>&copy; 2025 Frexiiks Life. All rights reserved.</footer>
 </body>
